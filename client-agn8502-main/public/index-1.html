@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Web Assignment 1</title>
+    <meta name="Aaron Nguyen">
+    <link rel="stylesheet" href="clubs.css">
+    <script src="clubs.js"></script>
+</head>
+<body>
+
+<h1 class="heading">Nightclub Capacity</h1>
+<h3 class="heading">Each time someone enters/leaves the club, select the correct club and click the appropriate button</h3>
+
+<div class="clubs_display" id="clubs display">
+    <div class="clubs" id="ClubArcane">
+        Club Arcane
+        <h3 id="ca_capacity" class="capacity">0</h3>
+        <p id="ca_message" class="message"></p>
+    </div>
+    <div class="clubs" id="ClubUnderground">
+        Club Underground
+        <h3 id="cu_capacity" class="capacity">0</h3>
+        <p id="cu_message" class="message"></p>
+    </div>
+    <div class="clubs" id="ClubSoda">
+        Club Soda
+        <h3 id="cs_capacity" class="capacity">0</h3>
+        <p id="cs_message" class="message"></p>
+    </div>
+    <div class="clubs" id="Studio52">
+        Studio 52
+        <h3 id="s52_capacity" class="capacity">0</h3>
+        <p id="s52_message" class="message"></p>
+    </div>
+</div>
+
+<div id="radio_buttons">
+    <input type="radio" id="ca_radio" name="club_buttons" value="Club Arcane">
+    <label for="ca_radio" class="radio">Club Arcane</label><br>
+    <input type="radio" id="cu_radio" name="club_buttons" value="Club Underground">
+    <label for="cu_radio" class="radio">Club Underground</label><br>
+    <input type="radio" id="cs_radio" name="club_buttons" value="Club Soda">
+    <label for="cs_radio" class="radio">Club Soda</label><br>
+    <input type="radio" id="s52_radio" name="club_buttons" value="Studio 52">
+    <label for="s52_radio" class="radio">Studio 52</label><br>
+</div>
+
+<div>
+    <button type="button" id="minus" class="plusminus" onclick="minus_capacity()">-</button>
+    <button type="button" id="plus" class="plusminus" onclick="plus_capacity()">+</button>
+</div>
+
+</body>
+</html>
