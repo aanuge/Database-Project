@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Web Assignment 0</title>
+  <meta name="description" content="First web assignment">
+  <meta name="author" content="student name">
+  <style>
+    font-family: Segoe UI;
+    font-size: 50px;
+  </style>
+  <script>
+    function changeColor(event) {
+      var color = 'White';
+      switch(document.getElementById('Nightclubs').value) {
+        case 'Club Arcane':
+           color = 'purple';
+           document.getElementById('club info').value = 'Name: Club Arcane \nLocation: Runeterra \nCapacity: 200 \nMusical Theme: EDM'
+           break;
+        case 'Club Underground':
+           color = 'brown';
+           document.getElementById('club info').value = 'Name: Club Underground \nLocation: Zaun \nCapacity: 100 \nMusical Theme: Rap'
+           break;
+        case 'Club Soda':
+           color = 'blue';
+           document.getElementById('club info').value = 'Name: Club Soda \nLocation: Piltover \nCapacity: 250 \nMusical Theme: Pop'
+           break;
+        case 'Studio 52':
+           color = 'yellow';
+           document.getElementById('club info').value = 'Name: Studio 52 \nLocation: Bandle City \nCapacity: 300 \nMusical Theme: Grunge'
+           break;
+        case 'Ciro\'s':
+           color = 'green';
+           document.getElementById('club info').value = 'Name: Ciro\'s \nLocation: Bilgewater \nCapacity: 100 \nMusical Theme: Jazz'
+           break;
+        case 'Paradisio Garage':
+           color = 'cyan';
+           document.getElementById('club info').value = 'Name: Paradisio Garage \nLocation: Ionia \nCapacity: 220 \nMusical Theme: Punk Rock'
+           break;
+        default:
+           color = 'white';
+           document.getElementById('club info').value = 'Name: \nLocation: \nCapacity: \nMusical Theme: '
+           break;
+     }
+     document.body.style.backgroundColor = color;
+    }
+
+</script>
+</head>
+<body>
+<h1 style="font-family: verdana; text-align:center; font-size: 36px;"><strong>SWEN-344 Web Assignment 0</strong></h1>
+<h2 style="font-family: Impact; text-align:center;">Section 01</h2>
+<div align="center">
+  <select name="Nightclubs" id="Nightclubs" onchange="changeColor(this)" style="text-align:center;">
+    <option value="default"></option>
+    <option value="Club Arcane">Club Arcane</option>
+    <option value="Club Underground">Club Underground</option>
+    <option value="Club Soda">Club Soda</option>
+    <option value="Studio 52">Studio 52</option>
+    <option value="Ciro's">Ciro's</option>
+    <option value="Paradisio Garage">Paradisio Garage</option>
+  </select>
+</div>
+
+<div align="center" style="margin-top:25px;">
+  <textarea id="club info" name="club info" rows="4" cols="50" style="text-align:center;"></textarea>
+</div>
+
+</body>
+</html>
